@@ -4,8 +4,8 @@ abstract class AppAssets{
   static const String splashImage = "$core/SplashScreenImage.png";
   static const String authBackgroundImage = '$core/AuthBackground.png';
   static const String firstOnboardingScreenImage = "$core/FirstOnboardingScreen.png";
-  static const String secondOnboardingScreenImage = "$core/SecondOnboardingScreen.png";
-  static const String thirdOnboardingScreenImage = "$core/ThirdOnboardingScreen.png";
+  static const String secondOnboardingScreenImage = "$core/SecondOnboardingScreen.jpeg";
+  static const String thirdOnboardingScreenImage = "$core/ThirdOnboardingScreen.jpeg";
   static const String lastOnboardingScreenImage = "$core/LastOnboardingScreen.png";
 
 

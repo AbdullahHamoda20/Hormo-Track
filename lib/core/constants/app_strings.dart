@@ -21,9 +21,9 @@ class AppStrings {
   static const String onboarding3Desc = 'Access tools and tips to ease symptoms, understand triggers, and navigate your PCOS journey with confidence';
 
   static const String onboarding4Title = 'Got it! We\'ll help you :';
-  static const String onboarding4Point1 = 'Learn to recognize key symptoms early, empowering yourself with knowledge to better manage reproductive health challenges';
+  static const String onboarding4Point1 = 'Learn to recognize key symptoms early, empowering yourself with knowledge to better manage reproductive health challenges.';
   static const String onboarding4Point2 = 'Understand changes in your body by decoding discharge patterns, helping you stay informed and proactive about your health.';
-  static const String onboarding4Point3 = 'Keep tabs on your symptoms and mood shifts, making it easier to respond to your body\'s needs and enhance your well-being';
+  static const String onboarding4Point3 = 'Keep tabs on your symptoms and mood shifts, making it easier to respond to your body\'s needs and enhance your well-being.';
 
   // ===== Before Home =====
   static const String beforeHomeTitle = 'I\'ll use Hormo Track';
