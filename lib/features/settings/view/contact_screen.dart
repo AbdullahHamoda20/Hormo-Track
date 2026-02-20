@@ -13,19 +13,15 @@ class ContactScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              
               Align(
                 alignment: Alignment.topRight,
                 child: Icon(
-                  Icons.settings_outlined, 
+                  Icons.settings_outlined,
                   color: Color(0xFFE96677),
                   size: 28,
                 ),
               ),
-              
-              const SizedBox(height: 10), 
-
-              
+              const SizedBox(height: 10),
               Row(
                 children: [
                   GestureDetector(
@@ -60,16 +56,33 @@ class ContactScreen extends StatelessWidget {
                 child: const Text("Message", style: TextStyle(color: Colors.black54)),
               ),
               const SizedBox(height: 10),
-              TextField(
-                maxLines: 6,
-                decoration: InputDecoration(
-                  enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(15),
-                    borderSide: const BorderSide(color: Color(0xFFF8BBD0)),
-                  ),
-                  focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(15),
-                    borderSide: const BorderSide(color: Color(0xFFE57385)),
+              
+           
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  boxShadow: [
+                    BoxShadow(
+                      color: const Color.fromARGB(255, 240, 86, 107).withOpacity(0.1),
+                      blurRadius: 50,
+                      spreadRadius: 1,
+                      offset: const Offset(0, 4),
+                    ),
+                  ],
+                ),
+                child: TextField(
+                  maxLines: 6,
+                  decoration: InputDecoration(
+                    fillColor: Colors.white,
+                    filled: true,
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15),
+                      borderSide: const BorderSide(color: Color(0xFFF8BBD0)),
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(15),
+                      borderSide: const BorderSide(color: Color(0xFFE57385)),
+                    ),
                   ),
                 ),
               ),
@@ -84,7 +97,8 @@ class ContactScreen extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15),
                     ),
-                    elevation: 0,
+                    elevation: 5, 
+                    shadowColor: const Color(0xFFE96677).withOpacity(0.5),
                   ),
                   child: const Text(
                     "Send",
@@ -100,47 +114,63 @@ class ContactScreen extends StatelessWidget {
   }
 
   Widget customTextField({required String label}) {
-    return Row(
-      children: [
-        Container(
-          width: 80,
-          height: 45,
-          alignment: Alignment.center,
-          decoration: BoxDecoration(
-            color: const Color(0xFFFCE4EC),
-            borderRadius: const BorderRadius.only(
-              topLeft: Radius.circular(10),
-              bottomLeft: Radius.circular(10),
-            ),
-            border: Border.all(color: const Color(0xFFF8BBD0)),
+    return Container(
+     
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        boxShadow: [
+          BoxShadow(
+            color: const Color(0xFFE96677).withOpacity(0.1),
+            blurRadius: 50,
+            spreadRadius: 1,
+            offset: const Offset(0, 3),
           ),
-          child: Text(label, style: const TextStyle(color: Colors.black54)),
-        ),
-        Expanded(
-          child: SizedBox(
+        ],
+      ),
+      child: Row(
+        children: [
+          Container(
+            width: 80,
             height: 45,
-            child: TextField(
-              decoration: InputDecoration(
-                contentPadding: const EdgeInsets.symmetric(horizontal: 10),
-                enabledBorder: const OutlineInputBorder(
-                  borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(10),
-                    bottomRight: Radius.circular(10),
+            alignment: Alignment.center,
+            decoration: BoxDecoration(
+              color: const Color(0xFFFCE4EC),
+              borderRadius: const BorderRadius.only(
+                topLeft: Radius.circular(10),
+                bottomLeft: Radius.circular(10),
+              ),
+              border: Border.all(color: const Color(0xFFF8BBD0)),
+            ),
+            child: Text(label, style: const TextStyle(color: Colors.black54)),
+          ),
+          Expanded(
+            child: SizedBox(
+              height: 45,
+              child: TextField(
+                decoration: InputDecoration(
+                  fillColor: Colors.white,
+                  filled: true,
+                  contentPadding: const EdgeInsets.symmetric(horizontal: 10),
+                  enabledBorder: const OutlineInputBorder(
+                    borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(10),
+                      bottomRight: Radius.circular(10),
+                    ),
+                    borderSide: BorderSide(color: Color(0xFFF8BBD0)),
                   ),
-                  borderSide: BorderSide(color: Color(0xFFF8BBD0)),
-                ),
-                focusedBorder: const OutlineInputBorder(
-                  borderRadius: BorderRadius.only(
-                    topRight: Radius.circular(10),
-                    bottomRight: Radius.circular(10),
+                  focusedBorder: const OutlineInputBorder(
+                    borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(10),
+                      bottomRight: Radius.circular(10),
+                    ),
+                    borderSide: BorderSide(color: Color(0xFFE57385)),
                   ),
-                  borderSide: BorderSide(color: Color(0xFFE57385)),
                 ),
               ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 }

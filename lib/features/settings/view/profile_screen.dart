@@ -54,7 +54,7 @@ class ProfileScreen extends StatelessWidget {
                 customTextField(Icons.lock, "Password"),
                 SizedBox(height: 25),
                 
-                customTextField(Icons.phone, "Phone"),
+              
               ],
             ),
           ),
