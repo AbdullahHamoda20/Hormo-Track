@@ -65,7 +65,7 @@ class ContactScreen extends StatelessWidget {
                     BoxShadow(
                       color: const Color.fromARGB(255, 240, 86, 107).withOpacity(0.1),
                       blurRadius: 50,
-                      spreadRadius: 1,
+                      spreadRadius: 3,
                       offset: const Offset(0, 4),
                     ),
                   ],
@@ -122,7 +122,7 @@ class ContactScreen extends StatelessWidget {
           BoxShadow(
             color: const Color(0xFFE96677).withOpacity(0.1),
             blurRadius: 50,
-            spreadRadius: 1,
+            spreadRadius: 3,
             offset: const Offset(0, 3),
           ),
         ],
