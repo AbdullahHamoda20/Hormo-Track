@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class contact_screen extends StatelessWidget {
-  const contact_screen({super.key});
+class ContactScreen extends StatelessWidget {
+  const ContactScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -13,36 +13,43 @@ class contact_screen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              // 
+              
+              Align(
+                alignment: Alignment.topRight,
+                child: Icon(
+                  Icons.settings_outlined, 
+                  color: Color(0xFFE96677),
+                  size: 28,
+                ),
+              ),
+              
+              const SizedBox(height: 10), 
+
+              
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Icon(Icons.arrow_back, color: Colors.black54),
-                  Icon(Icons.settings_outlined, color: Colors.pink[200]),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
+                    child: const Icon(Icons.arrow_back, color: Colors.black54),
+                  ),
+                  const SizedBox(width: 20),
+                  const Text(
+                    "Contact Us",
+                    style: TextStyle(
+                      color: Color(0xFFE96677),
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ],
               ),
               const SizedBox(height: 30),
-
-              // 
-              const Text(
-                'Contact Us',
-                style: TextStyle(
-                  fontSize: 24,
-                  fontWeight: FontWeight.bold,
-                  color: Color(0xFFE57385), //
-                ),
-              ),
-              const SizedBox(height: 30),
-
-              // 
               customTextField(label: "Name"),
               const SizedBox(height: 15),
-
-              // 
               customTextField(label: "Email"),
               const SizedBox(height: 15),
-
-              //
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
                 decoration: BoxDecoration(
@@ -53,8 +60,6 @@ class contact_screen extends StatelessWidget {
                 child: const Text("Message", style: TextStyle(color: Colors.black54)),
               ),
               const SizedBox(height: 10),
-
-              // 
               TextField(
                 maxLines: 6,
                 decoration: InputDecoration(
@@ -69,8 +74,6 @@ class contact_screen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 40),
-
-              // (Send)
               SizedBox(
                 width: double.infinity,
                 height: 55,
@@ -96,7 +99,6 @@ class contact_screen extends StatelessWidget {
     );
   }
 
-  // "Widget" 
   Widget customTextField({required String label}) {
     return Row(
       children: [
