@@ -7,6 +7,7 @@ abstract class AppAssets{
   static const String secondOnboardingScreenImage = "$core/SecondOnboardingScreen.jpeg";
   static const String thirdOnboardingScreenImage = "$core/ThirdOnboardingScreen.jpeg";
   static const String lastOnboardingScreenImage = "$core/LastOnboardingScreen.png";
+  static const String beforeGoToHome = "$core/beforeGoToHome.png";
 
 
   /// Icons

@@ -3,7 +3,8 @@ import 'package:hormo_track/core/constants/app_assets.dart';
 import 'package:hormo_track/core/constants/app_colors.dart';
 import 'package:hormo_track/core/constants/app_strings.dart';
 import 'package:hormo_track/features/auth/view/signup_screen.dart';
-
+import 'package:hormo_track/features/onboarding/view/before_home.dart';
+import 'package:hormo_track/features/auth/view/change_password_screen.dart';
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -121,7 +122,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       onPressed: () {
                         Navigator.pushReplacement(
                           context,
-                          MaterialPageRoute(builder: (_) => const BeforeHome()),
+                          MaterialPageRoute(builder: (_) => const BeforeHomeScreen()),
                         );
                       },
                       style: ElevatedButton.styleFrom(

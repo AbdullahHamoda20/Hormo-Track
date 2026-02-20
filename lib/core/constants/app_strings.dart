@@ -27,7 +27,7 @@ class AppStrings {
 
   // ===== Before Home =====
   static const String beforeHomeTitle = 'I\'ll use Hormo Track';
-  static const String beforeHomeDesc = 'Build a better relationship with my cycle, understand my body\'s needs and stay prepared for every phases. With Hormo track, I promise to take care of myself and embrace each step of my journey';
+  static const String beforeHomeDesc = 'Build a better relationship with my cycle, understand my body\'s needs and stay prepared for every phases. With Hormo track, I promise to take care of myself and embrace each step of my journey.';
 
   // ===== Auth =====
   static const String login = 'Log In';
