@@ -5,6 +5,7 @@ import 'features/settings/view/profile_screen.dart';
 import 'features/settings/view/contact_screen.dart';
 import 'features/settings/view/settings_screen.dart';
 import 'features/tips/view/tips_screen.dart';
+import 'features/auth/view/change_password_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,13 +14,13 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  @override
+ @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      // 
-      home:  TipsScreen(),
-        
+      title: 'Password UI',
+     
+      home: const ChangePasswordScreen(),
     );
   }
 }
