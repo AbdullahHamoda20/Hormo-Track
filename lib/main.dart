@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 
@@ -22,20 +23,23 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
 
- @override
+  @override
 
 
 
- @override
+  @override
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Password UI',
-     
-      home: const ChangePasswordScreen(),
+      initialRoute: AppRoutes.splashScreen,
+      routes: {
+        AppRoutes.splashScreen: (context)=> SplashScreen(),
+        AppRoutes.onBoardingScreen: (context)=> OnboardingScreen(),
+        AppRoutes.settings : (context)=> SettingsScreen()
+      },
     );
   }
 }

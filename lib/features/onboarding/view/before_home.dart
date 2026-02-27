@@ -60,7 +60,7 @@ class _BeforeHomeScreenState extends State<BeforeHomeScreen>
             children: [
 
               /// Title
-            const Text(
+              const Text(
                 AppStrings.beforeHomeTitle,
                 textAlign: TextAlign.center,
                 style: TextStyle(
@@ -73,7 +73,7 @@ class _BeforeHomeScreenState extends State<BeforeHomeScreen>
               const SizedBox(height: 45),
 
               /// Description
-             const Text(
+              const Text(
                 AppStrings.beforeHomeDesc,
                 textAlign: TextAlign.center,
                 style:TextStyle(

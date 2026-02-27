@@ -1,58 +1,61 @@
 import 'package:flutter/material.dart';
+import 'package:hormo_track/core/constants/app_assets.dart';
 
 class ChangePasswordScreen extends StatelessWidget {
   const ChangePasswordScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Stack(
-        children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 30),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                const Text(
-                  "Change Your Password",
-                  style: TextStyle(
-                    fontSize: 24, 
-                    fontWeight: FontWeight.bold, 
-                    color: Color(0xFFE0667D),
+    return Container(
+      decoration: BoxDecoration(
+        image: DecorationImage(image: AssetImage(AppAssets.authBackgroundImage))
+      ),
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Column(
+              spacing: 10,
+            children: [
+              SizedBox(height: 200,),
+              const Text(
+                "Change Your Password",
+                style: TextStyle(
+                  fontSize: 24,
+                  fontWeight: FontWeight.bold,
+                  color: Color(0xFFE0667D),
+                ),
+              ),
+              const SizedBox(height: 40),
+      
+      
+              customInputField("New Password", Icons.lock_rounded),
+              const SizedBox(height: 25),
+      
+              customInputField("Confirm Password", Icons.lock_rounded),
+      
+              const SizedBox(height: 35),
+      
+              SizedBox(
+                width: double.infinity,
+                height: 55,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color(0xFFE0667D),
+                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                  ),
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: const Text(
+                    "Change Your Password",
+                    style: TextStyle(fontSize: 18, color: Colors.white),
                   ),
                 ),
-                const SizedBox(height: 40),
-                
-                
-                customInputField("New Password", Icons.lock_rounded),
-                const SizedBox(height: 25),
-                
-                customInputField("Confirm Password", Icons.lock_rounded),
-                
-                const SizedBox(height: 35),
-                
-                SizedBox(
-                  width: double.infinity,
-                  height: 55,
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFFE0667D),
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-                    ),
-                    onPressed: () {
-                      Navigator.pop(context); 
-                    },
-                    child: const Text(
-                      "Change Your Password", 
-                      style: TextStyle(fontSize: 18, color: Colors.white),
-                    ),
-                  ),
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:hormo_track/core/constants/app_colors.dart';
+import 'package:hormo_track/core/constants/app_strings.dart';
 
 class TipsScreen extends StatelessWidget {
   const TipsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    Color primaryPink = const Color(0xFFE96677);
 
     return Scaffold(
       backgroundColor: Colors.white,
@@ -15,11 +16,11 @@ class TipsScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Align(
+              const Align(
                 alignment: Alignment.topRight,
                 child: Icon(
                   Icons.settings_outlined,
-                  color: primaryPink,
+                  color: AppColors.primaryPink,
                   size: 28,
                 ),
               ),
@@ -32,10 +33,10 @@ class TipsScreen extends StatelessWidget {
                     onPressed: () => Navigator.pop(context),
                   ),
                   const SizedBox(width: 10),
-                  Text(
-                    "PCOS Tips & Self-Care",
+                  const Text(
+                    AppStrings.tipsAndSelfCare,
                     style: TextStyle(
-                      color: primaryPink,
+                      color: AppColors.primaryPink,
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
                     ),
@@ -48,17 +49,17 @@ class TipsScreen extends StatelessWidget {
                 "Reduce sugar and processed foods",
                 "Eat more veggies and protein",
                 "Drink plenty of water",
-              ], primaryPink),
+              ], AppColors.primaryPink),
               buildTipCard("Exercise", [
                 "Walk for 30 minutes daily",
                 "Try yoga or light workouts",
                 "Take good rest between sessions",
-              ], primaryPink),
+              ], AppColors.primaryPink),
               buildTipCard("Lifestyle", [
                 "Sleep 7-8 hours",
                 "Manage your stress",
                 "Take time for yourself every day",
-              ], primaryPink),
+              ], AppColors.primaryPink),
 
               const SizedBox(height: 30),
               const Center(
@@ -80,15 +81,15 @@ class TipsScreen extends StatelessWidget {
                   onPressed: () =>
                       Navigator.of(context).popUntil((route) => route.isFirst),
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: primaryPink,
+                    backgroundColor: AppColors.primaryPink,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15),
                     ),
                     elevation: 5,
-                    shadowColor: primaryPink.withOpacity(0.4),
+                    shadowColor: AppColors.primaryPink.withOpacity(0.4),
                   ),
                   child: const Text(
-                    "Back to home",
+                    AppStrings.backToHome,
                     style: TextStyle(
                       fontSize: 20,
                       color: Colors.white,
@@ -135,7 +136,7 @@ class TipsScreen extends StatelessWidget {
           ),
           const SizedBox(height: 12),
           ...tips.map(
-            (tip) => Padding(
+                (tip) => Padding(
               padding: const EdgeInsets.symmetric(vertical: 5.0),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,

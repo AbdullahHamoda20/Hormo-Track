@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:hormo_track/core/constants/app_colors.dart';
+
+import '../../../core/constants/app_strings.dart';
 
 class AboutUsScreen extends StatelessWidget {
+  const AboutUsScreen({super.key});
   @override
   Widget build(BuildContext context) {
-    Color primaryPink = Color(0xFFE96677);
 
     return Scaffold(
       backgroundColor: Colors.white,
@@ -13,50 +16,47 @@ class AboutUsScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              
-              Align(
+
+              const  Align(
                 alignment: Alignment.topRight,
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 15),
-                  child: Icon(Icons.settings_outlined, color: primaryPink, size: 28),
+                  padding: EdgeInsets.only(top: 15),
+                  child: Icon(Icons.settings_outlined, color: AppColors.primaryPink, size: 28),
                 ),
               ),
 
-              SizedBox(height: 10),
+              const  SizedBox(height: 10),
 
-             
+
               Row(
                 children: [
                   IconButton(
-                    icon: Icon(Icons.arrow_back, color: Colors.black54),
-                    onPressed: () => Navigator.pop(context), 
+                    icon: const Icon(Icons.arrow_back, color: Colors.black54),
+                    onPressed: () => Navigator.pop(context),
                   ),
-                  SizedBox(width: 10), 
-                  Text(
-                    "About Us",
+                  const SizedBox(width: 10),
+                  const Text(
+                    AppStrings.aboutUs,
                     style: TextStyle(
-                      color: primaryPink,
+                      color: AppColors.primaryPink,
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 ],
               ),
-
-              SizedBox(height: 60), 
-
-                 // 
-              const Spacer(flex: 1),              
-              Center(
+              const SizedBox(height: 60),
+              const Spacer(flex: 1),
+              const Center(
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                  padding:  EdgeInsets.symmetric(horizontal: 10.0),
                   child: Text(
-                    "We are a team of healthcare professionals and wellness experts dedicated providing support and resources for individuals with PCOS.",
+                    AppStrings.aboutUsDesc,
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 18,
-                      color: Colors.black87, 
-                      height: 1.5, 
+                      color: Colors.black87,
+                      height: 1.5,
                       fontWeight: FontWeight.w500,
                     ),
                   ),

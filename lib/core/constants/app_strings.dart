@@ -61,7 +61,7 @@ class AppStrings {
   static const String resultsRecommendations = 'Results and Recommendations';
   static const String resultsDesc = 'Personalized reports tailored to each user';
 
-  static const String tipsAndSelfCare = 'Tips & Self-Care';
+  static const String tipsAndSelfCare = 'PCOS Tips & Self-Care';
   static const String tipsDesc = 'General tips and self care for you';
 
   // ===== Clinical Data Input =====

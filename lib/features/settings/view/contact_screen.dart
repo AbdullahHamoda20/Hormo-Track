@@ -13,7 +13,7 @@ class ContactScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Align(
+              const Align(
                 alignment: Alignment.topRight,
                 child: Icon(
                   Icons.settings_outlined,
@@ -56,8 +56,8 @@ class ContactScreen extends StatelessWidget {
                 child: const Text("Message", style: TextStyle(color: Colors.black54)),
               ),
               const SizedBox(height: 10),
-              
-           
+
+
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
@@ -97,7 +97,7 @@ class ContactScreen extends StatelessWidget {
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15),
                     ),
-                    elevation: 5, 
+                    elevation: 5,
                     shadowColor: const Color(0xFFE96677).withOpacity(0.5),
                   ),
                   child: const Text(
@@ -115,7 +115,7 @@ class ContactScreen extends StatelessWidget {
 
   Widget customTextField({required String label}) {
     return Container(
-     
+
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
         boxShadow: [

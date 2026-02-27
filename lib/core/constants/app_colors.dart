@@ -18,6 +18,8 @@ class AppColors {
   static const  Color header = Color(0xffD63F67);
   static const  Color description = Color(0xffA8A8A8);
   static const Color back_skip_buttons = Color(0xff706D6D);
+  static const Color primaryPink = Color(0xFFE96677);
+
 
   // Buttons Color
   static const Color buttoColor = Color(0xffDA5F71);
