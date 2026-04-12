@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hormo_track/core/constants/app_colors.dart';
+import 'package:hormo_track/core/widgets/custom_app_bar.dart';
 
 import '../../../core/constants/app_strings.dart';
 
@@ -9,6 +10,7 @@ class AboutUsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return Scaffold(
+      appBar: CustomAppBar(),
       backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
@@ -16,16 +18,6 @@ class AboutUsScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-
-              const  Align(
-                alignment: Alignment.topRight,
-                child: Padding(
-                  padding: EdgeInsets.only(top: 15),
-                  child: Icon(Icons.settings_outlined, color: AppColors.primaryPink, size: 28),
-                ),
-              ),
-
-              const  SizedBox(height: 10),
 
 
               Row(
