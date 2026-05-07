@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-// تأكدي من عمل import للملف اللي فيه صفحة الـ tips
+
 import 'features/tips/view/tips_screen.dart'; 
 
 void main() {
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
    
-      home: const PcosTipsScreen(), 
+      home: const  TipsScreen(), 
     );
   }
 }
